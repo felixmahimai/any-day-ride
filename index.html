@@ -1,8 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0F2A2E">
 <title>Any Day Ride</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Public+Sans:wght@400;600;700&display=swap">
 <style>
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
 /* Layout concept: one long ride down the page. A wheel on the left rail rolls as you scroll, panels alternate dark teal and cream, and the five groups stack like cards on a road. */
 :root{
   --ink:#0F2A2E; --panel:#163A40; --line:#2B5E65; --cream:#F6F1E7;
@@ -170,6 +178,8 @@ h2{font-size:clamp(40px,11vw,60px);line-height:1.04;margin-bottom:20px}
 :focus-visible{outline:3px solid var(--amber);outline-offset:3px}
 </style>
 
+</head>
+<body>
 <div class="rail" aria-hidden="true"></div>
 <svg class="wheel" id="wheel" viewBox="-10 -10 20 20" aria-hidden="true"><circle r="8.5" fill="#0F2A2E" stroke="#F5A03A" stroke-width="2"/><g id="spokes" stroke="#F6F1E7" stroke-width="1.2"><line x1="-8" y1="0" x2="8" y2="0"/><line x1="0" y1="-8" x2="0" y2="8"/><line x1="-5.6" y1="-5.6" x2="5.6" y2="5.6"/><line x1="-5.6" y1="5.6" x2="5.6" y2="-5.6"/></g></svg>
 
@@ -493,3 +503,5 @@ function loop(t){if(vis.hero)drawHero(t);if(vis.map)drawMap(t);requestAnimationF
 onScroll();requestAnimationFrame(loop);
 })();
 </script>
+</body>
+</html>
